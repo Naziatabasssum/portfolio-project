@@ -29,19 +29,9 @@
 
 
 </head>
+<body class="about-page">
 
-<body class="index-page">
-
-
-
-
-
-
-
-
-
-
-    
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -56,7 +46,22 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const animations = [
+    "fadeUp","fadeDown","fadeLeft","fadeRight",
+    "bounce","pulse","shake","zoomIn","zoomOut",
+    "rotateIn","rotateOut","swing","blink","glow","blurIn"
+  ];
 
+  const allElements = document.querySelectorAll(".glass");
+
+  allElements.forEach(el => {
+    let randomAnim = animations[Math.floor(Math.random() * animations.length)];
+    el.classList.add("animate", randomAnim);
+  });
+});
+</script>
 
 </body>
 
