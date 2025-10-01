@@ -32,16 +32,81 @@
 
 <body class="index-page">
 
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">RHK.</h1>
+      </a>
 
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Professional experience</a></li>
+          <li><a href="services.html">SKills and Competencies</a></li>
+          <li><a href="portfolio.html">Achievements</a></li>
+          <li class="dropdown"><a href="#"><span>Education</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rahatk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
 
+    </div>
+  </header>
 
+  <main class="main">
 
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
 
+      <img src="assets/img/1.jpg.jpeg" alt="" data-aos="fade-in">
 
+      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>A S M Rahat Hassan Khan</h2>
+            <p>Technology and communication executive</p>
+            <a href="about.html" class="btn-get-started">About Me</a>
+          </div>
+        </div>
+      </div>
 
-    
+    </section><!-- /Hero Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>©️ <span>Copyright</span> <strong class="px-1 sitename">A S M Rahat Hassan Khan</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rahatk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+      </div>
+     
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -56,7 +121,22 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const animations = [
+    "fadeUp","fadeDown","fadeLeft","fadeRight",
+    "bounce","pulse","shake","zoomIn","zoomOut",
+    "rotateIn","rotateOut","swing","blink","glow","blurIn"
+  ];
 
+  const allElements = document.querySelectorAll(".glass");
+
+  allElements.forEach(el => {
+    let randomAnim = animations[Math.floor(Math.random() * animations.length)];
+    el.classList.add("animate", randomAnim);
+  });
+});
+</script>
 
 </body>
 
